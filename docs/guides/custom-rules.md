@@ -5,7 +5,7 @@ add your own for your project's own budgets without recompiling anything.
 
 ## Point the plugin at your file
 
-Go to **Project Settings → Plugins → Performance Analyzer → Custom Rules** and set **Custom Rules File
+Go to **Project Settings → Plugins → Threadbound Radar → Custom Rules** and set **Custom Rules File
 Path** to a `.json` file inside your project.
 
 Your rules are loaded **on top of** the built-in ones at startup, never instead of them. If one of your

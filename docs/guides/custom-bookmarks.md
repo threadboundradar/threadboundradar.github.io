@@ -4,20 +4,20 @@ The plugin already writes a bookmark into your Unreal Insights recording every t
 first time. These three Blueprint nodes let you mark **your own** moments, so a trace tells your story
 and not only the Rule Engine's.
 
-All three live under the **Performance Analyzer | Trace** category in the Blueprint node menu.
+All three live under the **Threadbound Radar | Trace** category in the Blueprint node menu.
 
 ## Before anything: record a trace
 
 The nodes only do something while a trace is recording. Start one with the console:
 
 ```
-IPA.Trace.Start
+TBR.Trace.Start
 ```
 
 …reproduce whatever you want to capture, then:
 
 ```
-IPA.Trace.Stop
+TBR.Trace.Stop
 ```
 
 If no trace is recording, every node below is a no-op. That is by design: you can leave the nodes in

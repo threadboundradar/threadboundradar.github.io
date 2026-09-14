@@ -6,7 +6,7 @@ Install it from your Fab library, enable it in **Edit → Plugins**, and restart
 
 ## 2. Open the panel
 
-From the **Window** menu, open the **Performance Analyzer** group. It gives you three panels, and each
+From the **Tools** menu, open the **Threadbound Radar** group. It gives you three panels, and each
 one answers a different question.
 
 ### Live Metrics — what is happening right now
@@ -86,7 +86,7 @@ normal Unreal Insights recording, nothing proprietary. And **starting a trace cl
 totals**, so the counts you read afterwards belong to the recording instead of to everything that
 happened since you opened the editor.
 
-If you prefer the console, `IPA.Trace.Start` and `IPA.Trace.Stop` do exactly the same thing.
+If you prefer the console, `TBR.Trace.Start` and `TBR.Trace.Stop` do exactly the same thing.
 
 ### Read it back in Trace Search
 
