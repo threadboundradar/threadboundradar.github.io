@@ -1,0 +1,16 @@
+/* Paleta alineada con los documentos del proyecto (mismos tokens que los HTML de OneDrive). */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0f1014;
+  --md-default-fg-color: #e8e9ec;
+  --md-default-fg-color--light: #c0c3cc;
+  --md-default-fg-color--lighter: #7a7d8a;
+  --md-code-bg-color: #1e2028;
+  --md-accent-fg-color: #5b8cff;
+  --md-typeset-a-color: #5b8cff;
+}
+[data-md-color-scheme="default"] {
+  --md-accent-fg-color: #2c59d4;
+  --md-typeset-a-color: #2c59d4;
+}
+.md-typeset table:not([class]) th { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
+.md-typeset code { font-size: .85em; }

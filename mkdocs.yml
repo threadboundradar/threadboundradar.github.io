@@ -1,0 +1,55 @@
+# Nombre decidido 2026-09-13: Threadbound Radar. threadboundradar.github.io libre en GitHub y Fab.
+site_name: Threadbound Radar
+site_description: Documentation for the Unreal Engine performance diagnostics plugin — what each rule means, how to write your own, and how to mark your own moments in a trace.
+site_url: https://threadboundradar.github.io/
+docs_dir: docs
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+
+nav:
+  - Home: index.md
+  - Getting started: quickstart.md
+  - Guides:
+      - Write your own rules: guides/custom-rules.md
+      - Mark your own moments in a trace: guides/custom-bookmarks.md
+  - Rules reference: rules/index.md
