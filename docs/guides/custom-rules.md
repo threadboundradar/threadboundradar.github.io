@@ -23,22 +23,20 @@ The file is a JSON array of rule objects:
 [
   {
     "id": "MY_001",
-    "name": "Too many draw calls without instancing",
-    "category": "rendering",
+    "name": "Wave spawns blow our handheld budget",
+    "category": "blueprint",
     "severity": "high",
     "regimes": ["playing"],
     "conditions": {
-      "render_thread_ms": { "gt": 16.6 },
-      "draw_calls": { "gt": 2000 },
-      "gpu_bound": { "eq": true }
+      "game_thread_ms": { "gt": 22 },
+      "blueprint_total_tick_cost_ms": { "gt": 5 }
     },
-    "cause": "Repeated static meshes without instancing. The RHI issues one draw call per actor.",
+    "cause": "Blueprint Tick is costing {blueprint_total_tick_cost_ms} on a frame our handheld target cannot afford.",
     "solutions": [
-      "Convert repeated actors to Hierarchical Instanced Static Meshes (HISM)",
-      "Enable Nanite on eligible high-poly meshes",
-      "Look for more than 50 instances of the same mesh in the level"
+      "Stagger the wave spawner so enemies activate over several frames",
+      "Move enemy logic that does not need every frame from Tick to a Timer"
     ],
-    "docs_url": "https://dev.epicgames.com/documentation/unreal-engine/instanced-static-mesh-component-in-unreal-engine"
+    "docs_url": "https://example.com/our-wiki/handheld-budget"
   }
 ]
 ```

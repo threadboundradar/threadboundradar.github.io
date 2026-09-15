@@ -52,4 +52,64 @@ nav:
   - Guides:
       - Write your own rules: guides/custom-rules.md
       - Mark your own moments in a trace: guides/custom-bookmarks.md
-  - Rules reference: rules/index.md
+  - Rules reference:
+      - Overview: rules/index.md
+      - Rendering:
+          - "RE_001 · Too many draw calls without instancing": rules/RE_001.md
+          - "RE_002 · Excessive triangle count without Nanite": rules/RE_002.md
+          - "RE_003 · High shading cost with few draw calls (60 FPS)": rules/RE_003.md
+          - "RE_004 · Critical shading cost with few draw calls (30 FPS)": rules/RE_004.md
+          - "RE_005 · Sustained GPU-bound (60 FPS)": rules/RE_005.md
+          - "RE_006 · Critical GPU-bound (30 FPS)": rules/RE_006.md
+          - "RE_013 · Dense geometry impacting the GPU without excess draw calls": rules/RE_013.md
+          - "RE_015 · Possible fill-rate or post-process bound": rules/RE_015.md
+          - "RE_017 · High draw calls — early warning": rules/RE_017.md
+          - "RE_018 · High triangle count — early warning": rules/RE_018.md
+          - "RE_019 · GPU time elevated within budget — early signal": rules/RE_019.md
+          - "RE_020 · Excess draw calls with render thread saturated (not GPU-bound)": rules/RE_020.md
+          - "RE_021 · Excess draw calls with render thread critical (not GPU-bound, 30 FPS)": rules/RE_021.md
+          - "RE_022 · Extremely high draw calls — multiplatform scalability risk": rules/RE_022.md
+          - "RE_023 · Extreme triangle count — scalability risk": rules/RE_023.md
+          - "RE_024 · Early signal of fill-rate / post-process bound": rules/RE_024.md
+          - "RE_030 · High triangle count without GPU-bound — possible culling/visibility cost": rules/RE_030.md
+          - "RE_039 · Early combined warning: draw calls + GPU time": rules/RE_039.md
+          - "RE_041 · High TSR cost": rules/RE_041.md
+          - "RE_042 · High Sky Atmosphere cost": rules/RE_042.md
+          - "RE_043 · High Volumetric Cloud cost": rules/RE_043.md
+          - "RE_044 · High Niagara GPU cost": rules/RE_044.md
+          - "RE_045 · Meshes missing LODs in the level": rules/RE_045.md
+          - "RE_046 · Dense meshes with Nanite disabled": rules/RE_046.md
+          - "RE_047 · Instancing candidates in the level": rules/RE_047.md
+          - "RE_048 · Few triangles per draw call": rules/RE_048.md
+          - "RE_049 · Landscape without Nanite": rules/RE_049.md
+          - "RE_050 · LOD chain that doesn't reduce": rules/RE_050.md
+      - CPU:
+          - "RE_009 · Game thread saturated — CPU-bound (60 FPS)": rules/RE_009.md
+          - "RE_010 · Critical game thread saturation — CPU-bound (30 FPS)": rules/RE_010.md
+          - "RE_026 · Elevated game thread — early warning (60 FPS)": rules/RE_026.md
+          - "RE_027 · Frame dominated by game thread with render thread low": rules/RE_027.md
+          - "RE_028 · Extreme CPU-bound — possible gameplay hitch": rules/RE_028.md
+          - "RE_032 · Game thread near the limit with GPU idle": rules/RE_032.md
+      - Memory:
+          - "RE_007 · High texture memory usage": rules/RE_007.md
+          - "RE_008 · Critical texture memory usage": rules/RE_008.md
+          - "RE_016 · Elevated texture memory — early warning": rules/RE_016.md
+          - "RE_025 · High texture memory correlated with a slow GPU": rules/RE_025.md
+          - "RE_031 · High texture memory without measured GPU impact": rules/RE_031.md
+          - "RE_051 · System RAM almost exhausted": rules/RE_051.md
+          - "RE_052 · System memory near the limit (percentage)": rules/RE_052.md
+          - "RE_053 · Sustained editor memory growth": rules/RE_053.md
+      - Blueprint:
+          - "RE_033 · Costly Blueprint tick (60 FPS)": rules/RE_033.md
+          - "RE_034 · Critical Blueprint tick": rules/RE_034.md
+          - "RE_035 · Many Blueprint classes ticking simultaneously": rules/RE_035.md
+          - "RE_036 · High aggregate Blueprint tick cost": rules/RE_036.md
+          - "RE_037 · Critical aggregate Blueprint tick cost": rules/RE_037.md
+          - "RE_038 · Tick cost concentrated in few classes": rules/RE_038.md
+      - General:
+          - "RE_011 · Frame outside the 60 FPS budget": rules/RE_011.md
+          - "RE_012 · Frame outside the critical 30 FPS budget": rules/RE_012.md
+          - "RE_014 · CPU and GPU saturated simultaneously": rules/RE_014.md
+          - "RE_029 · Extreme frame time spike — possible hitch": rules/RE_029.md
+          - "RE_040 · CPU and GPU both elevated without exceeding budget yet": rules/RE_040.md
+          - "RE_054 · Recurring hitches during play": rules/RE_054.md
