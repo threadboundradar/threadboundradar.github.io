@@ -30,6 +30,11 @@ Most frame-budget rules are limited to `playing`, because the same 55 ms means s
 while a map loads. Level-scan rules are not gated: a composition problem is a fact about the level
 whether you are playing or not.
 
+## What the game sustains, not one frame
+
+Most rules look at how the game behaves over a short stretch of play, so a single slow frame does not
+set them off. The few rules built to catch spikes and hitches say so on their own page.
+
 ## How to read severity
 
 Severity is about **how much of your frame is at stake**, not about how urgent it is for your project.
