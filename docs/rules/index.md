@@ -30,10 +30,9 @@ Most frame-budget rules are limited to `playing`, because the same 55 ms means s
 while a map loads. Level-scan rules are not gated: a composition problem is a fact about the level
 whether you are playing or not.
 
-## What the game sustains, not one frame
+## How often rules are checked
 
-Most rules look at how the game behaves over a short stretch of play, so a single slow frame does not
-set them off. The few rules built to catch spikes and hitches say so on their own page.
+The plugin checks the rules about once per second while it runs.
 
 ## How to read severity
 
