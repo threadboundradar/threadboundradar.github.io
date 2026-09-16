@@ -10,21 +10,21 @@ measured conditions, in these editor states, this is the probable cause and thes
 | **id** | Stable identifier such as `RE_001`. It never changes, so you can search for it |
 | **category** | `rendering`, `cpu`, `memory`, `blueprint` or `general` |
 | **severity** | `high`, `medium` or `low` |
-| **regimes** | Which editor states the rule is allowed to fire in |
+| **editor_states** | Which editor states the rule is allowed to fire in |
 | **conditions** | The measurements that must all be true at once |
 | **cause** | Why this probably happens |
 | **solutions** | What to do about it, in order of usefulness |
 
-## Regimes
+## Editor states
 
-A rule only fires in the regimes it declares:
+A rule only fires in the editor states it declares:
 
-| Regime | The editor is… |
+| Editor state | The editor is… |
 |---|---|
 | `playing` | Running a Play-in-Editor session |
 | `loading` | Loading a map or streaming packages |
 | `compiling` | Compiling shaders |
-| `editor_idle` | Doing none of the above |
+| `idle` | Doing none of the above |
 
 Most frame-budget rules are limited to `playing`, because the same 55 ms means something different
 while a map loads. Level-scan rules are not gated: a composition problem is a fact about the level

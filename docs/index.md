@@ -18,7 +18,7 @@ That last step is the point. Finding a problem is easy; knowing whether your cha
 
 ## What makes it different
 
-**It knows what the editor is doing.** Metrics always measure, but rules are gated by *regime*:
+**It knows what the editor is doing.** Metrics always measure, but rules are gated by the *editor state*:
 editor idle, compiling shaders, loading, or playing. A 400 ms spike while a map loads is not a
 performance drop, and the plugin will not report it as one.
 

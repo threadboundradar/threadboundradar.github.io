@@ -41,7 +41,7 @@ rules are allowed to fire. A rule about a 60 FPS budget will not bother you if y
 
 ## 4. Press Play and read the panel, top to bottom
 
-**The regime band** tells you what the editor is doing right now — idle, compiling shaders, loading, or
+**The editor state band** tells you what the editor is doing right now — idle, compiling shaders, loading, or
 playing. Rules are filtered by it, so you do not get frame-budget alerts while a map is still loading.
 
 **The live chart** draws CPU against GPU over the last seconds, so you see not just *which* one is the

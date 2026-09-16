@@ -26,7 +26,7 @@ The file is a JSON array of rule objects:
     "name": "Wave spawns blow our handheld budget",
     "category": "blueprint",
     "severity": "high",
-    "regimes": ["playing"],
+    "editor_states": ["playing"],
     "conditions": {
       "game_thread_ms": { "gt": 22 },
       "blueprint_total_tick_cost_ms": { "gt": 5 }
@@ -47,13 +47,13 @@ The file is a JSON array of rule objects:
 | `name` | yes | Short title shown in the diagnostics table |
 | `category` | yes | `rendering`, `cpu`, `memory`, `blueprint`, `general` |
 | `severity` | yes | `high`, `medium`, `low` |
-| `regimes` | no | Which editor states allow the rule to fire. **Omitting it means all regimes** |
+| `editor_states` | no | Which editor states allow the rule to fire. **Omitting it means all of them** |
 | `conditions` | yes | Measurements that must all be true — see below |
 | `cause` | yes | One or two sentences on why this happens |
 | `solutions` | yes | Array of concrete actions, most useful first |
 | `docs_url` | no | Link shown for further reading |
 
-!!! warning "A missing `regimes` field means *all* regimes, not *playing*"
+!!! warning "A missing `editor_states` field means *all* of them, not *playing*"
     This is deliberate. A field you forgot should not silently narrow your rule — a rule that stopped
     firing outside Play would be indistinguishable from a broken one.
 
@@ -120,5 +120,5 @@ not conditions that need work to compute.
 
 - [ ] The `id` uses your own prefix
 - [ ] Every metric name is spelled exactly as listed above — an unknown name simply never matches
-- [ ] The rule makes sense in the regimes you declared
+- [ ] The rule makes sense in the editor states you declared
 - [ ] `solutions` are actions, not observations
