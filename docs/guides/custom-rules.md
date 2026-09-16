@@ -57,6 +57,11 @@ The file is a JSON array of rule objects:
     This is deliberate. A field you forgot should not silently narrow your rule — a rule that stopped
     firing outside Play would be indistinguishable from a broken one.
 
+!!! note "Your rules show the text you wrote"
+    The built-in rules are translated into the editor's language. Your own rules are not gathered for
+    translation — they display the `name`, `cause` and `solutions` exactly as you typed them, in every
+    language. Write them in the language your team works in.
+
 ## Conditions
 
 `conditions` is an object of `metric → { operator: value }`. **All of them must be true at the same
